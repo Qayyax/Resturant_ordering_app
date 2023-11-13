@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Linking the css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Resturant Ordering App</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Jimmy's Diner</h1>
+      <p class="title-desc">The best burgers and pizzas in town.</p>
+    </header>
+    <main>
+      <!-- Js render here -->
+    </main>
+
+    <!-- Place - order section -->
+    <section class="place-order">
+      <p class="your-order">Your order</p>
+
+      <!-- Loop Start -->
+      <div class="order-placed">
+        <div class="order-item">
+          <p class="item-ordered">Pizza</p>
+          <button class="remove-btn">remove</button>
+        </div>
+        <p class="order-price">$20</p>
+      </div>
+      <!-- Loop end -->
+      <!-- Second order -->
+      <div class="order-placed">
+        <div class="order-item">
+          <p class="item-ordered">Pizza</p>
+          <button class="remove-btn">remove</button>
+        </div>
+        <p class="order-price">$20</p>
+      </div>
+      <!-- Second order end -->
+
+      <div class="line-break"></div>
+
+      <!-- Total price section -->
+      <div class="order-placed total-price-section">
+        <div class="order-item">
+          <p class="item-ordered">Total price:</p>
+        </div>
+        <p class="order-price" id="total-price">$20</p>
+      </div>
+
+      <!-- Complete Order button -->
+      <button class="complete-order">Complete order</button>
+    </section>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

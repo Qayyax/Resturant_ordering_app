@@ -1,0 +1,173 @@
+:root {
+  --primary-font: Smythe;
+  --secondary-font: Jost;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+h1,
+p {
+  font-family: var(--primary-font), sans-serif;
+}
+
+.title,
+.title-desc {
+  font-weight: 400;
+}
+
+.title {
+  font-size: 39px;
+}
+
+.title-desc {
+  font-size: 22.42px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header,
+main {
+  width: 600px;
+  border: 2px solid black;
+}
+
+header {
+  background-image: url(/images/banner.png);
+  background-repeat: no-repeat;
+  color: white;
+  padding: 46px;
+  margin-top: 10%;
+}
+
+main {
+  padding: 67px 46px 10px;
+}
+
+/* Individual items */
+
+.items-container {
+  display: flex;
+  width: 508px;
+  padding-bottom: 51px;
+  border-bottom: 1px solid #d2d2d2;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.main-item {
+  display: flex;
+  column-gap: 31px;
+}
+
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+/* Button */
+
+.add-item {
+  font-family: Inter, sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  background-color: white;
+  margin-top: 10px;
+  border: 1.5px solid #dedede;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+/* Items design */
+
+.icon {
+  font-size: 78.72px;
+}
+
+.item {
+  font-size: 28px;
+}
+
+.item-ingredient {
+  font-size: 16px;
+  color: #8b8b8b;
+}
+
+.item-price {
+  font-size: 20px;
+}
+
+/* When you place order */
+
+.place-order p {
+  font-size: 28px;
+}
+
+.place-order {
+  width: 508px;
+  border: 2px solid brown;
+  display: flex;
+  flex-direction: column;
+
+  /* display: none; */
+}
+
+.your-order {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.order-placed {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.order-item {
+  display: flex;
+  column-gap: 13px;
+}
+
+.remove-btn {
+  border: none;
+  background-color: white;
+  font-family: var(--secondary-font);
+  color: #bbbbbb;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.line-break {
+  border: 2px solid #393333;
+  width: 504px;
+  margin-top: 9px;
+  margin-bottom: 14px;
+}
+
+.total-price-section {
+  margin-bottom: 0px;
+}
+
+.complete-order {
+  background-color: #16db99;
+  border-radius: 3px;
+  border: none;
+  padding: 18px;
+  box-shadow: 0 1px 2px 5% black;
+  color: white;
+  font-family: var(--secondary-font), sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 53px;
+}
