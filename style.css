@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 /* Typography */
 h1,
 p {
@@ -32,12 +37,15 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: #443535;
 }
 
 header,
-main {
+main,
+.place-order,
+.thanks {
   width: 600px;
-  border: 2px solid black;
+  background-color: white;
 }
 
 header {
@@ -49,7 +57,8 @@ header {
 }
 
 main {
-  padding: 67px 46px 10px;
+  padding: 67px 46px 0px;
+  position: relative;
 }
 
 /* Individual items */
@@ -76,6 +85,10 @@ main {
 
 /* Button */
 
+button {
+  cursor: pointer;
+}
+
 .add-item {
   font-family: Inter, sans-serif;
   font-size: 32px;
@@ -86,7 +99,15 @@ main {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* text-align: center; */
+}
+
+.add-item:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 /* Items design */
@@ -115,11 +136,9 @@ main {
 }
 
 .place-order {
-  width: 508px;
-  border: 2px solid brown;
   display: flex;
   flex-direction: column;
-
+  padding: 46px;
   /* display: none; */
 }
 
@@ -170,4 +189,92 @@ main {
   font-weight: 700;
   font-size: 16px;
   margin-top: 53px;
+}
+
+/* After you place an Order */
+/* Order Form */
+
+.order-form {
+  position: absolute;
+  width: 524px;
+  top: 125px;
+  left: 38px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 5.186544418334961px 5.186544418334961px 255.43731689453125px 0px
+    #00000080;
+  align-items: center;
+}
+.order-form,
+form input {
+  border: 1.3px solid #757575;
+  border-radius: 3.89px;
+}
+
+.form-header,
+form input {
+  font-family: var(--secondary-font), sans-serif;
+}
+
+.form-header {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 47px 109px;
+}
+
+form input {
+  font-weight: 400;
+  color: #757575;
+  font-size: 20px;
+  padding: 16px 26px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 475.91px;
+  row-gap: 23px;
+  margin-bottom: 30px;
+}
+
+#pay-btn {
+  background-color: #16db99;
+  border: none;
+  border-radius: 3.89px;
+  font-family: var(--secondary-font), sans-serif;
+  font-weight: 700;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* Thank you message */
+
+.thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 45px;
+  padding-bottom: 252px;
+}
+
+.thanks-container {
+  display: flex;
+  align-items: center;
+  background-color: #ecfdf5;
+  padding: 51px 59px;
+}
+
+.thank-you-message {
+  font-family: var(--primary-font);
+  color: #065f46;
+  font-size: 32px;
+}
+
+/* Display none */
+
+.ready-to-pay {
+  display: none;
 }

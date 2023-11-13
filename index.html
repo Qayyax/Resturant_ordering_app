@@ -28,30 +28,52 @@
     </header>
     <main>
       <!-- Js render here -->
+      <section id="order-form" class="order-form ready-to-pay">
+        <h2 class="form-header">Enter card details</h2>
+
+        <form id="payment-details">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            required
+            id="full-name"
+          />
+          <input
+            type="number"
+            placeholder="Enter your card number"
+            required
+            id="card-number"
+          />
+          <input
+            type="text"
+            placeholder="Enter CVV"
+            required
+            id="card-cvv"
+            inputmode="numeric"
+            pattern="\d{3}"
+            maxlength="3"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+          />
+
+          <button type="submit" id="pay-btn">Pay</button>
+        </form>
+      </section>
     </main>
 
-    <!-- Place - order section -->
+    <!-- Placed - order section -->
     <section class="place-order">
       <p class="your-order">Your order</p>
-
-      <!-- Loop Start -->
-      <div class="order-placed">
-        <div class="order-item">
-          <p class="item-ordered">Pizza</p>
-          <button class="remove-btn">remove</button>
-        </div>
-        <p class="order-price">$20</p>
+      <div class="actual-order">
+        <!-- Loop Start -->
+        <!-- <div class="order-placed">
+          <div class="order-item">
+            <p class="item-ordered">Pizza</p>
+            <button class="remove-btn">remove</button>
+          </div>
+          <p class="order-price">$20</p>
+        </div> -->
+        <!-- Loop end -->
       </div>
-      <!-- Loop end -->
-      <!-- Second order -->
-      <div class="order-placed">
-        <div class="order-item">
-          <p class="item-ordered">Pizza</p>
-          <button class="remove-btn">remove</button>
-        </div>
-        <p class="order-price">$20</p>
-      </div>
-      <!-- Second order end -->
 
       <div class="line-break"></div>
 
@@ -60,11 +82,18 @@
         <div class="order-item">
           <p class="item-ordered">Total price:</p>
         </div>
-        <p class="order-price" id="total-price">$20</p>
+        <p class="order-price">$<span id="total-price">0</span></p>
       </div>
 
       <!-- Complete Order button -->
-      <button class="complete-order">Complete order</button>
+      <button class="complete-order" id="complete-order">Complete order</button>
+    </section>
+    <section class="thanks ready-to-pay">
+      <div class="thanks-container">
+        <p class="thank-you-message">
+          Thanks, James! Your order is on its way!
+        </p>
+      </div>
     </section>
     <script src="index.js" type="module"></script>
   </body>
