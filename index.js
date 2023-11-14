@@ -5,6 +5,8 @@ const actualOrder = document.querySelector('.actual-order');
 const totalPrice = document.getElementById('total-price');
 const placedOrder = document.querySelector('.place-order');
 const thanksMessage = document.querySelector('.thanks');
+const message = document.querySelector('.thank-you-message');
+// const fullName = document.getElementById('full-name');
 const orderedItem = [];
 
 const completeOrderBtn = document.getElementById('complete-order');
@@ -105,8 +107,10 @@ function checkTotalBalance() {
 const paymentDetails = document.getElementById('payment-details');
 paymentDetails.addEventListener('submit', (e) => {
   e.preventDefault();
+  let fullName = document.getElementById('full-name');
   placedOrder.classList.add('ready-to-pay');
   orderForm.classList.add('ready-to-pay');
   thanksMessage.classList.remove('ready-to-pay');
+  message.innerText = `Thanks, ${fullName.value}! Your order is on its way!`;
   orderedItem.splice(0, orderedItem.length);
 });
